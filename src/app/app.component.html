@@ -1,0 +1,16 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<input
+  type="number"
+  [(ngModel)]="celcius"
+  (keyup)="controlTemp()"
+  value="{{celcius}}"
+/>
+<input
+  type="number"
+  [(ngModel)]="farenheit"
+  (keyup)="controlTempCel()"
+  value="{{farenheit}}"
+/>
