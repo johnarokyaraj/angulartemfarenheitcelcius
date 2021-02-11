@@ -12,11 +12,19 @@ export class AppComponent {
 
   ngOnInit() {}
   controlTemp() {
-    this.farenheit = (this.celcius * 9.0) / 5.0 + 32;
+    if (this.celcius != "") {
+      this.farenheit = (this.celcius * 9.0) / 5.0 + 32;
+    } else {
+      this.farenheit = "";
+    }
     console.log("calling controlTemp");
   }
   controlTempCel() {
-    this.celcius = ((this.farenheit - 32) * 5.0) / 9.0;
+    if (this.farenheit != "") {
+      this.celcius = ((this.farenheit - 32) * 5.0) / 9.0;
+    } else {
+      this.celcius = "";
+    }
     console.log("calling controlTempCel");
   }
 }
